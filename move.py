@@ -88,9 +88,9 @@ def moveLeft(percentSpeed):#Motor 1 positive and negative rotation
 			pwm_A.ChangeDutyCycle(abs(percentSpeed))
 
 
-def moveTank(leftSpeed, rightSpeed):
-	moveLeft(leftSpeed)
+def moveTank(rightSpeed, leftSpeed):
 	moveRight(rightSpeed)
+	moveLeft(leftSpeed)
 
 def moveArcade(throttle, turnSpeed):
 	throttle *= -1
