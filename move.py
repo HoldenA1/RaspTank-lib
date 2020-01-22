@@ -58,17 +58,16 @@ def moveRight(percentSpeed):#Motor 2 positive and negative rotation
 		GPIO.output(Motor_B_Pin2, GPIO.LOW)
 		GPIO.output(Motor_B_EN, GPIO.LOW)
 	else:
-		dir = math.copysign(percentSpeed)
 		if percentSpeed < 0:
 			GPIO.output(Motor_B_Pin1, GPIO.HIGH)
 			GPIO.output(Motor_B_Pin2, GPIO.LOW)
 			pwm_B.start(100)
-			pwm_B.ChangeDutyCycle(percentSpeed)
+			pwm_B.ChangeDutyCycle(abs(percentSpeed))
 		elif percentSpeed > 0:
 			GPIO.output(Motor_B_Pin1, GPIO.LOW)
 			GPIO.output(Motor_B_Pin2, GPIO.HIGH)
 			pwm_B.start(0)
-			pwm_B.ChangeDutyCycle(percentSpeed)
+			pwm_B.ChangeDutyCycle(abs(percentSpeed))
 
 
 def moveLeft(percentSpeed):#Motor 1 positive and negative rotation
@@ -81,12 +80,12 @@ def moveLeft(percentSpeed):#Motor 1 positive and negative rotation
 			GPIO.output(Motor_A_Pin1, GPIO.HIGH)
 			GPIO.output(Motor_A_Pin2, GPIO.LOW)
 			pwm_A.start(100)
-			pwm_A.ChangeDutyCycle(percentSpeed)
+			pwm_A.ChangeDutyCycle(abs(percentSpeed))
 		elif percentSpeed > 0:
 			GPIO.output(Motor_A_Pin1, GPIO.LOW)
 			GPIO.output(Motor_A_Pin2, GPIO.HIGH)
 			pwm_A.start(0)
-			pwm_A.ChangeDutyCycle(percentSpeed)
+			pwm_A.ChangeDutyCycle(abs(percentSpeed))
 
 
 def moveTank(leftSpeed, rightSpeed):
