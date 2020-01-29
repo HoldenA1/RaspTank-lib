@@ -11,11 +11,5 @@ Install libraries:
 $ pip install rpi_ws281x Adafruit_PCA9685
 ```
 
-### Usage
-```
-import move
-import servo
-```
-
 ### Documentation
 For further instructions and documentation, please visit the [GitBook](https://holden-adamec.gitbook.io/adeept-python-library/).
