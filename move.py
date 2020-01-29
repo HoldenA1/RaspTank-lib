@@ -103,9 +103,7 @@ def destroy():
 	motorStop()
 	GPIO.cleanup()             # Release resource
 
-
-if __name__ == '__main__':
-	try:
-		setup()
-	except KeyboardInterrupt:
-		destroy()
+try:
+	setup()
+except KeyboardInterrupt:
+	destroy()
