@@ -58,7 +58,7 @@ def camera_ang(direction, ang):
 	pwm.set_pwm(11,0,org_pos)
 
 
-def hand(command):
+def arm(command):
 	if command == 'in':
 		pwm.set_pwm(13, 0, L13_ST3)
 		pwm.set_pwm(12, 0, L12_ST4)
@@ -70,15 +70,15 @@ def hand(command):
 		pwm.set_pwm(13, 0, L13_ST1)
 
 
-def cir_pos(pos):
+def wrist(pos):
 	pwm.set_pwm(14, 0, L14_ST2+30*pos)
 
 
-def catch(pos):
+def hand(pos):
 	pwm.set_pwm(15, 0, L15_ST2+10*pos)
 
 
-def hand_pos(pos):
+def arm_pos(pos):
 	if pos <= 4:
 		pwm.set_pwm(12, 0, L12_ST1-30*pos)
 		pwm.set_pwm(13, 0, L13_ST1-30*pos)
