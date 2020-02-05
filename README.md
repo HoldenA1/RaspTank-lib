@@ -12,10 +12,10 @@ $ pip install rpi_ws281x Adafruit_PCA9685
 ```
 
 Setup I2C Servo Motors:
-`nano /boot/config.txt`
-Add dtparam=i2c1=on
-ctrl-x, y, enter
-reboot
+- `nano /boot/config.txt`
+- Add dtparam=i2c1=on
+- ctrl-x, y, enter
+- reboot
 
 ### Documentation
 For further instructions and documentation, please visit the [GitBook](https://holden-adamec.gitbook.io/adeept-python-library/).
