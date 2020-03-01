@@ -2,6 +2,7 @@ import move
 import servo
 import time
 import ultra
+import LED
 
 def turn_left(degrees):
   move.moveTank(100,100)
@@ -41,3 +42,11 @@ def move_wrist(degrees):
   #-90 to 90 degrees
   servo.wrist(int((degrees/12)+6))
   time.sleep(.25)
+  
+def white_light(time):
+  led2 = LED.LED(640000)
+  led2.colorWipe(10, wait_ms=time/12)
+  
+def blue_light(time):
+  led = LED.LED(800000)
+  led.colorWipe(10, wait_ms=time/12)
