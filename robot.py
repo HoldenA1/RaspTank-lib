@@ -2,7 +2,13 @@ import move
 import servo
 import time
 import ultra
+import linetracking
 import LED
+
+status_right = linetracking.status_right
+status_left = linetracking.status_left
+status_middle = linetracking.status_middle
+
 
 def turn_left(degrees):
   move.moveTank(100,100)
