@@ -28,3 +28,8 @@ def read_ultrasonic():
 def move_arm(position):
   servo.arm_pos(position)
   time.sleep(.2)
+  
+def move_wrist(degrees):
+  #-90 to 90 degrees
+  servo.wrist(int((degrees/12)+6))
+  time.sleep(.25)
