@@ -13,6 +13,14 @@ def turn_right(degrees):
   move.moveTank(-100,-100)
   time.sleep(.008888*degrees)
   move.motorStop()
+
+def move_forward(seconds):
+   move.moveTank(-100,100)
+   time.sleep(seconds)
+
+def move_backwards(seconds):
+   move.moveTank(100,-100)
+   time.sleep(seconds)
   
 def open_hand(degrees=-10):
   servo.hand(degrees)
