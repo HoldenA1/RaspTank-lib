@@ -50,3 +50,10 @@ def white_light(time):
 def blue_light(time):
   led = LED.LED(800000)
   led.colorWipe(10, wait_ms=time/12)
+  
+def loop(functions):
+  while True:
+    text = input("")
+    function_names = [e.__name__ for e in functions]
+    if text in function_names:
+      functions[function_names.index(text)]()
